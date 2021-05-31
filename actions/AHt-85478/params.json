@@ -1,0 +1,32 @@
+{
+    "category": "plugins",
+    "display": "Daily - Join room ",
+    "fields": {
+        "AHq": {
+            "caption": "room url",
+            "editor": "DynamicValue",
+            "name": "roomurl",
+            "rank": 0,
+            "value": "text"
+        },
+        "AHr": {
+            "caption": "Style",
+            "default_val": "bottom",
+            "doc": "",
+            "editor": "Dropdown",
+            "name": "size",
+            "options": "center,bottom right,top right",
+            "rank": 1
+        },
+        "AHs": {
+            "caption": "meeting token",
+            "default_val": "",
+            "editor": "DynamicValue",
+            "name": "token",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "client_side"
+}

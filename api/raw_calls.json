@@ -1,0 +1,223 @@
+{
+    "auth": "private_key_header",
+    "calls": {
+        "AAI": {
+            "doc_link": "https://docs.daily.co/reference#list-rooms",
+            "initialized": true,
+            "method": "get",
+            "name": "list rooms",
+            "publish_as": "data",
+            "rank": 4,
+            "ret_value": "api.1622494385281x917140771709124600.plugin_api.AAI",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAI\":{\"caption\":\"list room\",\"fields\":{\"_p_total_count\":{\"ret_value\":\"number\",\"caption\":\"total_count\",\"sample_value\":32,\"path\":[\"total_count\"]},\"_p_data\":{\"ret_value\":\"list.api.1622494385281x917140771709124600.plugin_api.AAI.data\",\"caption\":\"data\",\"path\":[\"data\"]}}},\"plugin_api.AAI.data\":{\"caption\":\"list rooms data\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"f2d30807-0ff7-4d84-84b6-7b9d1e7e4600\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"v3e6H5w7HD25wr3yf7rf\",\"path\":[\"name\"]},\"_p_api_created\":{\"ret_value\":\"boolean\",\"caption\":\"api_created\",\"sample_value\":true,\"path\":[\"api_created\"]},\"_p_privacy\":{\"ret_value\":\"text\",\"caption\":\"privacy\",\"sample_value\":\"public\",\"path\":[\"privacy\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://lunchpaillabs.daily.co/v3e6H5w7HD25wr3yf7rf\",\"path\":[\"url\"]},\"_p_created_at\":{\"ret_value\":\"text\",\"caption\":\"created_at\",\"sample_value\":\"2021-05-10T18:15:04.000Z\",\"path\":[\"created_at\"]},\"_p_config.enable_chat\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_chat\",\"sample_value\":true,\"path\":[\"config\",\"enable_chat\"]},\"_p_config.enable_network_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_network_ui\",\"sample_value\":true,\"path\":[\"config\",\"enable_network_ui\"]},\"_p_config.enable_prejoin_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_prejoin_ui\",\"sample_value\":true,\"path\":[\"config\",\"enable_prejoin_ui\"]},\"_p_config.enable_new_call_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_new_call_ui\",\"sample_value\":true,\"path\":[\"config\",\"enable_new_call_ui\"]},\"_p_config.nbf\":{\"ret_value\":\"number\",\"caption\":\"config nbf\",\"sample_value\":12241992,\"path\":[\"config\",\"nbf\"]},\"_p_config.exp\":{\"ret_value\":\"number\",\"caption\":\"config exp\",\"sample_value\":1224202499999,\"path\":[\"config\",\"exp\"]},\"_p_config.max_participants\":{\"ret_value\":\"number\",\"caption\":\"config max_participants\",\"sample_value\":6,\"path\":[\"config\",\"max_participants\"]},\"_p_config.autojoin\":{\"ret_value\":\"boolean\",\"caption\":\"config autojoin\",\"sample_value\":true,\"path\":[\"config\",\"autojoin\"]}}}}",
+            "url": "https://api.daily.co/v1/rooms"
+        },
+        "AAL": {
+            "doc_link": "https://docs.daily.co/reference#get-room-configuration",
+            "initialized": true,
+            "method": "get",
+            "name": "room details",
+            "publish_as": "data",
+            "rank": 5,
+            "ret_value": "api.1622494385281x917140771709124600.plugin_api.AAL",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAL\":{\"caption\":\"room detail\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"eeafe32f-bfa9-4769-be01-28e0d2fb2b67\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"1TlqydzcpDS3vmi5sngm\",\"path\":[\"name\"]},\"_p_api_created\":{\"ret_value\":\"boolean\",\"caption\":\"api_created\",\"sample_value\":true,\"path\":[\"api_created\"]},\"_p_privacy\":{\"ret_value\":\"text\",\"caption\":\"privacy\",\"sample_value\":\"public\",\"path\":[\"privacy\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://lunchpaillabs.daily.co/1TlqydzcpDS3vmi5sngm\",\"path\":[\"url\"]},\"_p_created_at\":{\"ret_value\":\"text\",\"caption\":\"created_at\",\"sample_value\":\"2021-05-31T21:05:19.000Z\",\"path\":[\"created_at\"]},\"_p_config.enable_chat\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_chat\",\"sample_value\":true,\"path\":[\"config\",\"enable_chat\"]},\"_p_config.enable_knocking\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_knocking\",\"sample_value\":true,\"path\":[\"config\",\"enable_knocking\"]},\"_p_config.enable_network_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_network_ui\",\"sample_value\":false,\"path\":[\"config\",\"enable_network_ui\"]},\"_p_config.enable_prejoin_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_prejoin_ui\",\"sample_value\":true,\"path\":[\"config\",\"enable_prejoin_ui\"]},\"_p_config.enable_new_call_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_new_call_ui\",\"sample_value\":true,\"path\":[\"config\",\"enable_new_call_ui\"]}}}}",
+            "url": "https://api.daily.co/v1/rooms/[room name]",
+            "url_params": {
+                "AAM": {
+                    "allow_blank": true,
+                    "doc": "https://docs.daily.co/reference#get-room-configuration",
+                    "key": "room name",
+                    "private": true,
+                    "value": "1TlqydzcpDS3vmi5sngm",
+                    "visibility": "public"
+                }
+            }
+        },
+        "AJR": {
+            "body": "{\n  \"properties\": {\n    \"enable_network_ui\": false,\n    \"exp\": <expires (unix timestamp)>,\n    \"enable_new_call_ui\": true,\n    \"enable_prejoin_ui\": true,\n    \"enable_knocking\": <knocking>,\n    \"enable_screenshare\": <screenshare>,\n    \"enable_chat\": <chat>,\n    \"enable_recording\": <record (scale plan)>,\n    \"owner_only_broadcast\": <broadcast>\n  },\n  \"privacy\": \"<privacy>\"\n}",
+            "body_params": {
+                "AJU": {
+                    "doc": "When a user knocks to request access to a meeting, a room owner must be in the room to approve that join request. Options are true or false.",
+                    "key": "knocking",
+                    "private": true,
+                    "value": "true"
+                },
+                "AJV": {
+                    "doc": "Enable screensharing, options are true or false",
+                    "key": "screenshare",
+                    "private": true,
+                    "value": "true"
+                },
+                "AJW": {
+                    "doc": "Enable chat, options are true or false",
+                    "key": "chat",
+                    "private": true,
+                    "value": "true"
+                },
+                "AJY": {
+                    "doc": "The options are private and public. Anyone can join public rooms. Users will need a valid meeting token or need to be let in by knocking (if enabled) to enter private rooms.",
+                    "key": "privacy",
+                    "private": true,
+                    "value": "public"
+                },
+                "AJr": {
+                    "doc": "Set to true to enable webinar-style rooms.  If set to true, only meeting owners will be able to share their audio and video.",
+                    "key": "broadcast",
+                    "private": true,
+                    "value": "false"
+                },
+                "AKv": {
+                    "doc": "for scale plan only, options are cloud, local, rtp-tracks, output-byte-stream",
+                    "key": "record (scale plan)",
+                    "private": true,
+                    "value": ""
+                },
+                "ALF": {
+                    "key": "expires (unix timestamp)",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "doc_link": "https://docs.daily.co/reference#create-room",
+            "initialized": true,
+            "method": "post",
+            "name": "create room",
+            "publish_as": "action",
+            "rank": 0,
+            "ret_value": "api.1622494385281x917140771709124600.plugin_api.AJR",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AJR\":{\"caption\":\"create room\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"0cd0a72e-5970-450a-8e8c-1ef720d1483e\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Uy15GgxzIQ4wrkp510hz\",\"path\":[\"name\"]},\"_p_api_created\":{\"ret_value\":\"boolean\",\"caption\":\"api_created\",\"sample_value\":true,\"path\":[\"api_created\"]},\"_p_privacy\":{\"ret_value\":\"text\",\"caption\":\"privacy\",\"sample_value\":\"public\",\"path\":[\"privacy\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://lunchpaillabs.daily.co/Uy15GgxzIQ4wrkp510hz\",\"path\":[\"url\"]},\"_p_created_at\":{\"ret_value\":\"text\",\"caption\":\"created_at\",\"sample_value\":\"2021-05-31T21:10:06.174Z\",\"path\":[\"created_at\"]},\"_p_config.enable_chat\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_chat\",\"sample_value\":true,\"path\":[\"config\",\"enable_chat\"]},\"_p_config.enable_knocking\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_knocking\",\"sample_value\":true,\"path\":[\"config\",\"enable_knocking\"]},\"_p_config.enable_network_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_network_ui\",\"sample_value\":false,\"path\":[\"config\",\"enable_network_ui\"]},\"_p_config.enable_prejoin_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_prejoin_ui\",\"sample_value\":true,\"path\":[\"config\",\"enable_prejoin_ui\"]},\"_p_config.enable_new_call_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_new_call_ui\",\"sample_value\":true,\"path\":[\"config\",\"enable_new_call_ui\"]}}}}",
+            "url": "https://api.daily.co/v1/rooms",
+            "wrap_error": false
+        },
+        "AJa": {
+            "0": "A",
+            "1": "J",
+            "2": "Z",
+            "body": "{\n  \"properties\": {\n    \"enable_network_ui\": false,\n    \"exp\": <expires (unix timestamp)>,\n    \"enable_new_call_ui\": true,\n    \"enable_prejoin_ui\": true,\n    \"enable_knocking\": <knocking>,\n    \"enable_screenshare\": <screenshare>,\n    \"enable_chat\": <chat>,\n    \"enable_recording\": <record (scale plan)>,\n    \"owner_only_broadcast\": <broadcast>\n  },\n  \"privacy\": \"<privacy>\"\n}",
+            "body_params": {
+                "AJU": {
+                    "doc": "When a user knocks to request access to a meeting, a room owner must be in the room to approve that join request. Options are true or false.",
+                    "key": "knocking",
+                    "private": true,
+                    "value": "true"
+                },
+                "AJV": {
+                    "doc": "Enable screensharing, options are true or false",
+                    "key": "screenshare",
+                    "private": true,
+                    "value": "true"
+                },
+                "AJW": {
+                    "doc": "Enable chat, options are true or false",
+                    "key": "chat",
+                    "private": true,
+                    "value": "true"
+                },
+                "AJX": {
+                    "doc": "Set to true to enable webinar-style rooms.  If set to true, only meeting owners will be able to share their audio and video.",
+                    "key": "broadcast",
+                    "private": true,
+                    "value": "false"
+                },
+                "AJY": {
+                    "doc": "The options are private and public. Anyone can join public rooms. Users will need a valid meeting token or need to be let in by knocking (if enabled) to enter private rooms.",
+                    "key": "privacy",
+                    "private": true,
+                    "value": "public"
+                },
+                "AKw": {
+                    "allow_blank": false,
+                    "doc": "for scale plan only, options are cloud, local, rtp-tracks, output-byte-stream",
+                    "key": "record (scale plan)",
+                    "private": true,
+                    "value": ""
+                },
+                "ALP": {
+                    "key": "expires (unix timestamp)",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "doc_link": "https://docs.daily.co/reference#set-room-configuration",
+            "initialized": true,
+            "method": "post",
+            "name": "update room",
+            "publish_as": "action",
+            "rank": 2,
+            "ret_value": "api.1622494385281x917140771709124600.plugin_api.AJa",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AJa\":{\"caption\":\"update room\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"e275529e-2f81-431d-be9a-495000608e61\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"oCOe5tCVw9WcUFpg9j14\",\"path\":[\"name\"]},\"_p_api_created\":{\"ret_value\":\"boolean\",\"caption\":\"api_created\",\"sample_value\":true,\"path\":[\"api_created\"]},\"_p_privacy\":{\"ret_value\":\"text\",\"caption\":\"privacy\",\"sample_value\":\"public\",\"path\":[\"privacy\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://lunchpaillabs.daily.co/oCOe5tCVw9WcUFpg9j14\",\"path\":[\"url\"]},\"_p_created_at\":{\"ret_value\":\"text\",\"caption\":\"created_at\",\"sample_value\":\"2021-05-31T20:22:30.000Z\",\"path\":[\"created_at\"]},\"_p_config.enable_chat\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_chat\",\"sample_value\":true,\"path\":[\"config\",\"enable_chat\"]},\"_p_config.enable_knocking\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_knocking\",\"sample_value\":true,\"path\":[\"config\",\"enable_knocking\"]},\"_p_config.enable_network_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_network_ui\",\"sample_value\":false,\"path\":[\"config\",\"enable_network_ui\"]},\"_p_config.enable_prejoin_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_prejoin_ui\",\"sample_value\":true,\"path\":[\"config\",\"enable_prejoin_ui\"]},\"_p_config.enable_new_call_ui\":{\"ret_value\":\"boolean\",\"caption\":\"config enable_new_call_ui\",\"sample_value\":true,\"path\":[\"config\",\"enable_new_call_ui\"]}}}}",
+            "url": "https://api.daily.co/v1/rooms/[room name]",
+            "url_params": {
+                "AJb": {
+                    "allow_blank": true,
+                    "doc": "Set the room name that this meeting token should correspond to",
+                    "key": "room name",
+                    "private": true,
+                    "value": "oCOe5tCVw9WcUFpg9j14"
+                }
+            }
+        },
+        "AJc": {
+            "body": "",
+            "doc_link": "https://docs.daily.co/reference#delete-room",
+            "initialized": true,
+            "method": "delete_method",
+            "name": "delete room",
+            "publish_as": "action",
+            "rank": 3,
+            "ret_value": "api.1622494385281x917140771709124600.plugin_api.AJc",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AJc\":{\"caption\":\"delete room\",\"fields\":{\"_p_deleted\":{\"ret_value\":\"boolean\",\"caption\":\"deleted\",\"sample_value\":true,\"path\":[\"deleted\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"L1xEK4PkGK1t3hOwoSg1\",\"path\":[\"name\"]}}}}",
+            "url": "https://api.daily.co/v1/rooms/[room name]",
+            "url_params": {
+                "AJd": {
+                    "allow_blank": true,
+                    "key": "room name",
+                    "private": true,
+                    "value": "L1xEK4PkGK1t3hOwoSg1"
+                }
+            }
+        },
+        "AJe": {
+            "body": "{\"properties\":{\"room_name\":\"<room name>\",\"is_owner\":<is owner?>,\"user_name\":\"<user name>\"}}",
+            "body_params": {
+                "AJf": {
+                    "allow_blank": true,
+                    "doc": "Set the room name that this meeting token should correspond to",
+                    "key": "room name",
+                    "private": true,
+                    "value": "oCOe5tCVw9WcUFpg9j14"
+                },
+                "AJi": {
+                    "allow_blank": false,
+                    "doc": "Prepopulate a username. The user will be able to change this later.",
+                    "key": "user name",
+                    "private": true,
+                    "value": " "
+                },
+                "AJq": {
+                    "doc": "options are true or false",
+                    "key": "is owner?",
+                    "private": true,
+                    "value": "false"
+                }
+            },
+            "doc_link": "https://docs.daily.co/reference#create-meeting-token",
+            "initialized": true,
+            "method": "post",
+            "name": "create meeting token",
+            "publish_as": "action",
+            "rank": 1,
+            "ret_value": "api.1622494385281x917140771709124600.plugin_api.AJe",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AJe\":{\"caption\":\"create meeting token\",\"fields\":{\"_p_token\":{\"ret_value\":\"text\",\"caption\":\"token\",\"sample_value\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyIjoib0NPZTV0Q1Z3OVdjVUZwZzlqMTQiLCJvIjpmYWxzZSwidSI6IiAiLCJkIjoiOTkxNWQxNDMtOGQ4NS00ODcxLWE5YTQtZGJlOTZkMWRhYTcxIiwiaWF0IjoxNjIyNDk1OTk2fQ.9njthIFdh71xJWfUX6iBZE6bYOvSeEY39eWFnCkKrUk\",\"path\":[\"token\"]}}}}",
+            "url": "https://api.daily.co/v1/meeting-tokens"
+        }
+    },
+    "human": "Daily",
+    "token_param_name": "Authorization"
+}

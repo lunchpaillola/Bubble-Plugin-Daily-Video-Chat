@@ -1,0 +1,12 @@
+{
+    "categories": {
+        "0": "video"
+    },
+    "demo_page": "https://bubble.io/page?type=page&name=index&id=video-chat-daily",
+    "description": "Add Daily video and audio to your bubble app in minutes with this plugin. \n\nTo get started, add your daily API key, which you can access by logging in here ( https://dashboard.daily.co/developers) to the authorization in the plugin. You'll need to enter  bearer before your token (ex. Bearer 4ffad...).",
+    "image": "//s3.amazonaws.com/appforest_uf/f1620651367233x368629357606446340/daily%20video%20api.svg",
+    "license": "private",
+    "link": "www.daily.co",
+    "name": "Daily Video Chat",
+    "plugin_instructions": "========SETUP=========\n\n1. Create a Daily Account (www.daily.co)\n\n2. Grab your api key from you developer dashboard ( [https://dashboard.daily.co/developers](https://dashboard.daily.co/developers)) \n\n3.Enter your key into the plugins api key section with the prefix bearer (example: Bearer 4feddedded...)\n\n====== RESOURCES ======\n\nNeed to reference Daily's documentation?\n\nVisit [https://docs.daily.co/reference]\n\nWant a step by step tutorial on creating a video chat app with daily and bubble?\n\nCheck out [https://www.notion.so/lunchpaillabs/Creating-a-video-chat-with-Daily-and-Bubble-in-30-minutes-b2ce810a902040c08888177ecd92f54c]\n\n\nWant to create a webinar-style application with Bubble and the Daily plugin check out [https://www.notion.so/lunchpaillabs/Creating-a-Webinar-Style-app-with-Daily-and-Bubble-in-less-than-an-hour-601fe6e2131541efa8547cecf97f7729]\n\nWant to see a demo bubble editor with this plugin?\n\nVisit here: [https://bubble.io/page?type=page&name=index&id=video-chat-daily]\n\n\nFind a bug?\n\nSubmit a bug report at help@lunchpaillabs.com"
+}
