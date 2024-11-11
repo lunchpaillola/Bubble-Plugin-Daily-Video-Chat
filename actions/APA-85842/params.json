@@ -1,0 +1,30 @@
+{
+    "category": "plugins",
+    "display": "Daily - update participant audio",
+    "fields": {
+        "APB": {
+            "caption": "userid",
+            "doc": "The user's id of the participant that the action should update. You can the daily - create meeting token action to create a user id in conjunction with the daily - join room action when the user joins the room.",
+            "editor": "DynamicValue",
+            "name": "userid",
+            "rank": 1,
+            "value": "text"
+        },
+        "APC": {
+            "caption": "set audio",
+            "default_val": true,
+            "doc": "Use this action to modify a participant for audio-only calls. Only a meeting owner can modify a participant. You can create a meeting owner token with Daily - create meeting token.",
+            "editor": "DynamicValue",
+            "name": "setaudio",
+            "rank": 2,
+            "value": "boolean"
+        },
+        "APD": {
+            "caption": "Use this action to modify a participant for audio-only calls. Only a meeting owner can modify a participant. You can create a meeting owner token with Daily - create room.",
+            "editor": "Label",
+            "name": "information",
+            "rank": 0
+        }
+    },
+    "type": "client_side"
+}

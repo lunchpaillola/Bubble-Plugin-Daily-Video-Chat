@@ -1,0 +1,176 @@
+{
+    "category": "plugins",
+    "display": "Daily - create meeting token",
+    "fields": {
+        "AMh": {
+            "caption": "room name",
+            "doc": "The room for which this token is valid. ",
+            "editor": "DynamicValue",
+            "name": "name",
+            "optional": false,
+            "rank": 1,
+            "value": "text"
+        },
+        "AMi": {
+            "caption": "username",
+            "default_val": "",
+            "doc": "The user's name in this meeting. The name displays in the user interface when the user is muted or has turned off the camera, and in the chat window.",
+            "editor": "DynamicValue",
+            "name": "username",
+            "optional": true,
+            "rank": 6,
+            "value": "text"
+        },
+        "AMj": {
+            "caption": "is owner",
+            "default_val": false,
+            "doc": "Determines whether the user has meeting owner privileges. For example, if the room is configured for owner_only_broadcast, this user can send video, and audio, and can screen share.",
+            "editor": "DynamicValue",
+            "name": "is_owner",
+            "rank": 2,
+            "value": "boolean"
+        },
+        "AMk": {
+            "caption": "Use this action to create \"Meeting tokens\" through Daily's API. Meeting tokens control room access and session configuration on a per-user basis. ",
+            "editor": "Label",
+            "name": "information",
+            "rank": 0
+        },
+        "ANU": {
+            "caption": "start cloud recording",
+            "default_val": false,
+            "doc": "Determines whether to automatically start cloud recording when the user with this token joins the room.",
+            "editor": "DynamicValue",
+            "name": "start_cloud_recording",
+            "rank": 17,
+            "value": "boolean"
+        },
+        "ANX": {
+            "caption": "To unlock the below parameters, you'll need to add a credit card to your account. Visit https://dashboard.daily.co/billing to learn more about pricing and add your credit card details.",
+            "editor": "Label",
+            "name": "scale_plan_feature",
+            "rank": 15
+        },
+        "ANY": {
+            "caption": "enable recording",
+            "default_val": "",
+            "doc": "Determines whether a recording is enabled for the users with this token. Options are cloud,local,rtp-tracks,output-byte-stream",
+            "editor": "DynamicValue",
+            "name": "recording",
+            "optional": true,
+            "rank": 16,
+            "value": "text"
+        },
+        "ANZ": {
+            "caption": "-----------------Credit card required to unlock----------------",
+            "editor": "Label",
+            "name": "scale_plan",
+            "rank": 14
+        },
+        "AOn": {
+            "caption": "user id",
+            "doc": "The user's id for this meeting session. You can use user id to map between your user database and meeting events/attendance. Max length is 36 characters.",
+            "editor": "DynamicValue",
+            "name": "user_id",
+            "optional": true,
+            "rank": 7,
+            "value": "text"
+        },
+        "AOv": {
+            "caption": "-----------------------Advanced Settings-----------------------",
+            "editor": "Label",
+            "name": "advanced_settings",
+            "rank": 4
+        },
+        "AOw": {
+            "caption": "Below are optional advanced meeting token settings.",
+            "editor": "Label",
+            "name": "advanced_info",
+            "rank": 5
+        },
+        "AOx": {
+            "caption": "start video off",
+            "default_val": false,
+            "doc": "When a participant first joins a meeting, keep their camera off.",
+            "editor": "DynamicValue",
+            "name": "start_video_off",
+            "optional": false,
+            "rank": 9,
+            "value": "boolean"
+        },
+        "AOy": {
+            "caption": "start audio off",
+            "default_val": false,
+            "doc": "When a participant first joins a meeting, keep their microphone muted.",
+            "editor": "DynamicValue",
+            "name": "start_audio_off",
+            "rank": 8,
+            "value": "boolean"
+        },
+        "AQo": {
+            "caption": "enable recording ui",
+            "default_val": true,
+            "doc": "Determines whether the participant using the meeting token can see the Recording button in Daily Prebuilt's UI, which can be found in the video call tray. If this value is false, the button will not be included in the tray. If it's true, the Recording button will be displayed.",
+            "editor": "DynamicValue",
+            "name": "enable_recording_ui",
+            "rank": 18,
+            "value": "boolean"
+        },
+        "AQp": {
+            "caption": "language",
+            "doc": "The default language  for this user. Currently supported languages are de: German, en: English, fi: Finnish,  fr: French, nl: Dutch, pt: Portuguese, pl: Polish, sv: Swedish, es: Spanish, tr: Turkish, it: Italian, ka: Georgian, jp: Japanese, no: Norwegian, ru:Russian  user: Uses the browser's current language and defaults to English if not supported.",
+            "editor": "DynamicValue",
+            "name": "lang",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AQq": {
+            "caption": "eject at token exp",
+            "default_val": false,
+            "doc": "Kick this user out of the meeting at the time this meeting token expires. If either this property or eject_after_elapsed are set for the token, the room's eject properties are overridden.",
+            "editor": "DynamicValue",
+            "name": "eject_at_token_exp",
+            "optional": true,
+            "rank": 12,
+            "value": "boolean"
+        },
+        "AQr": {
+            "caption": "eject after elapsed",
+            "doc": "Kick this user out of the meeting this many seconds after they join the meeting. If either this property or eject_at_token_exp are set for the token, the room's eject properties are overridden.",
+            "editor": "DynamicValue",
+            "name": "eject_after_elapsed",
+            "optional": true,
+            "rank": 13,
+            "value": "number"
+        },
+        "AQs": {
+            "caption": "nbf (unix timestamp)",
+            "doc": "This is a unix timestamp (seconds since the epoch.) Users cannot join a meeting in this room before this time. To convert a Bubble date format extract unix timestamps and divide by 1000",
+            "editor": "DynamicValue",
+            "name": "notbefore",
+            "optional": true,
+            "rank": 10,
+            "value": "number"
+        },
+        "AQt": {
+            "caption": "exp (unix timestamp)",
+            "doc": "\"Expires\". This is a unix timestamp (seconds since the epoch.) Users cannot join a meeting in this room after this time. To convert a Bubble date format extract unix timestamps and divide by 1000",
+            "editor": "DynamicValue",
+            "name": "expires",
+            "optional": true,
+            "rank": 11,
+            "value": "number"
+        }
+    },
+    "return_value": {
+        "AKi": {
+            "caption": "token",
+            "name": "token",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "type": "server_side",
+    "use_packages": false
+}

@@ -1,0 +1,13 @@
+{
+    "category": "plugins",
+    "display": "Daily - stop recording",
+    "fields": {
+        "AQG": {
+            "caption": "To unlock this action, you'll need to add a credit card to your account. Visit https://dashboard.daily.co/billing to learn more about pricing and add your credit card details.",
+            "editor": "Label",
+            "name": "scaleplanonly",
+            "rank": 0
+        }
+    },
+    "type": "client_side"
+}

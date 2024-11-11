@@ -1,0 +1,103 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 30,
+        "width": 30
+    },
+    "display": "Daily Events",
+    "events": {
+        "AOc": {
+            "caption": "left-meeting",
+            "doc": "Emitted once the local participant has joined the call. At this point, the call is considered connected.",
+            "name": "left-meeting"
+        },
+        "AOh": {
+            "caption": "joined-meeting",
+            "doc": "Emitted once the local participant has left the call. From the local user's perspective, this means the call has disconnected.",
+            "name": "joined-meeting"
+        },
+        "AOk": {
+            "caption": "participant-left",
+            "doc": "Emitted once a remote participant leaves the call",
+            "name": "participant-left"
+        },
+        "AOl": {
+            "caption": "participant-joined",
+            "doc": "Emitted once a remote participant joins the call",
+            "name": "participant-joined"
+        },
+        "AQQ": {
+            "caption": "active-speaker-changed",
+            "doc": "Emitted once the active speaker changes",
+            "name": "active-speaker-changed"
+        },
+        "AQW": {
+            "caption": "recording-started",
+            "doc": "Emitted for all participants when a recording starts.",
+            "name": "recording-started"
+        },
+        "AQX": {
+            "caption": "recording-stopped",
+            "doc": "Emitted for all participants when a recording stops.",
+            "name": "recording-stopped"
+        },
+        "ARX": {
+            "caption": "recording-error",
+            "doc": "Emitted when a recording error occurs.",
+            "name": "recording-error"
+        }
+    },
+    "icon": "ion-code-working",
+    "property_applications": {
+        "resizable": true
+    },
+    "states": {
+        "AOm": {
+            "caption": "event participant user id",
+            "doc": "The event's current participant id",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n}"
+            },
+            "name": "participant user id",
+            "value": "text"
+        },
+        "AOo": {
+            "caption": "current participant user ids",
+            "doc": "List of user-ids for all current participants in a call",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "participants",
+            "value": "text"
+        },
+        "AQP": {
+            "caption": "active speaker",
+            "doc": "The user id of the active speaker",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "activeParticipant",
+            "value": "text"
+        },
+        "ARr": {
+            "caption": "recording Instance id",
+            "doc": "Displays the instance ID whenever the instance is started or stopped.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "recordingInstanceId",
+            "value": "text"
+        },
+        "ARs": {
+            "caption": "recording id",
+            "doc": "Shows the recording ID when the recording begins.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "recordingId",
+            "value": "text"
+        }
+    }
+}

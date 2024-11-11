@@ -1,0 +1,23 @@
+{
+    "caption": "join",
+    "doc": "join a custom video call",
+    "fields": {
+        "APR": {
+            "caption": "url",
+            "doc": "Enter the full Daily URL for the room the user should join. If you don't have a URL yet, you can add one with the Daily - Create room action. The URL should be in the format https://your-daily-domain.daily.co/room-name",
+            "editor": "DynamicValue",
+            "name": "url",
+            "rank": 0,
+            "value": "text"
+        },
+        "APS": {
+            "caption": "token",
+            "doc": "Optionally enter a meeting token to configure the video session on a per-user basis. To create a meeting token, use the daily - create meeting token action.",
+            "editor": "DynamicValue",
+            "name": "token",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        }
+    }
+}

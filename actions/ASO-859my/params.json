@@ -1,0 +1,175 @@
+{
+    "category": "plugins",
+    "display": "Daily - start live stream",
+    "fields": {
+        "ARu": {
+            "caption": "layout",
+            "default_val": "default",
+            "doc": "an object specifying the way participants’ videos are laid out in the live stream.",
+            "editor": "Dropdown",
+            "name": "layout",
+            "options": "default,single-participant,active-participant,portrait",
+            "rank": 2
+        },
+        "ARv": {
+            "caption": "user id",
+            "doc": "If using the single-participant layout, specify the user id of the participant that the single participant layout should focus on. You can set a user id with the daily - create meeting token action.",
+            "editor": "StaticText",
+            "name": "user_id",
+            "optional": true,
+            "rank": 6
+        },
+        "ARw": {
+            "caption": "------------Single participant layout parameters-----------",
+            "editor": "Label",
+            "name": "----------------single_participant_layout_parameters----------------",
+            "rank": 4
+        },
+        "ARx": {
+            "caption": "If using the single-participant layout, specify the user id of the single participant. Set a user id with the Daily - create meeting token action.",
+            "editor": "Label",
+            "name": "singleParticipantInfo",
+            "rank": 5
+        },
+        "ARy": {
+            "caption": "To unlock this action, you'll need to add a credit card to your account. Visit https://dashboard.daily.co/billing to learn more about pricing and add your credit card details.",
+            "editor": "Label",
+            "name": "scaleplanonly",
+            "rank": 0
+        },
+        "ARz": {
+            "caption": "max streams",
+            "default_val": 9,
+            "doc": "Specify the number of max streams in the recording (from 1-9). The default value is 9.",
+            "editor": "DynamicValue",
+            "is_list": false,
+            "name": "maxstreams",
+            "optional": false,
+            "rank": 3,
+            "value": "number"
+        },
+        "ASA": {
+            "caption": "----------------Portrait layout parameters----------------",
+            "editor": "Label",
+            "name": "----------------portrait_layout_parameters----------------",
+            "rank": 7
+        },
+        "ASB": {
+            "caption": "If using the portrait layout, you can specify the variant. The default is vertical which will display the call grid style. Inset will have one participant's video take up the entire screen and the other in a smaller rectangle.",
+            "editor": "Label",
+            "name": "portraitinfo",
+            "rank": 8
+        },
+        "ASC": {
+            "caption": "variant",
+            "default_val": "vertical",
+            "editor": "Dropdown",
+            "name": "variant",
+            "optional": true,
+            "options": "vertical,inset",
+            "rank": 9
+        },
+        "ASD": {
+            "caption": "height",
+            "default_val": 1080,
+            "doc": "Specified to control the resolution of the live stream. The value must be even, i.e., a multiple of 2.",
+            "editor": "DynamicValue",
+            "name": "heightRecording",
+            "optional": false,
+            "rank": 13,
+            "value": "number"
+        },
+        "ASE": {
+            "caption": "width",
+            "default_val": 1920,
+            "doc": "Specified to control the resolution of the live stream. The value must be even, i.e., a multiple of 2",
+            "editor": "DynamicValue",
+            "name": "widthRecording",
+            "optional": false,
+            "rank": 12,
+            "value": "number"
+        },
+        "ASF": {
+            "caption": "background color",
+            "default_val": "rgba(0,0,0,1)",
+            "doc": "Specifies the background color of the stream, formatted as #rrggbb or #aarrggbb string.",
+            "editor": "Color",
+            "name": "backgroundColor",
+            "optional": true,
+            "rank": 14
+        },
+        "ASG": {
+            "caption": "video bitrate",
+            "default_val": 5000,
+            "doc": "Specifies the video bitrate in kilobits per second (kbps) to use for video output. Value can range between 10 and 10000",
+            "editor": "DynamicValue",
+            "name": "videoBitrate",
+            "optional": false,
+            "rank": 16,
+            "value": "number"
+        },
+        "ASH": {
+            "caption": "audio bitrate",
+            "default_val": 160,
+            "doc": "Specifies the audio bitrate in kilobits per second (kbps) to use for audio output. Value can range between 10 and 320",
+            "editor": "DynamicValue",
+            "name": "audioBitrate",
+            "optional": false,
+            "rank": 17,
+            "value": "number"
+        },
+        "ASI": {
+            "caption": "Below are optional advanced recording settings to further configure the recording experience.",
+            "editor": "Label",
+            "name": "advanced_settings",
+            "optional": true,
+            "rank": 11,
+            "value": "number"
+        },
+        "ASJ": {
+            "caption": "-----------------------Advanced Settings-----------------------",
+            "editor": "Label",
+            "name": "advanced_settings_info",
+            "rank": 10
+        },
+        "ASK": {
+            "caption": "min Idle time out",
+            "default_val": 300,
+            "doc": "Amount of time in seconds to wait before ending a recording or live stream when the room is idle (e.g. when all users have muted video and audio). ",
+            "editor": "DynamicValue",
+            "name": "minIdleTimeOut",
+            "optional": false,
+            "rank": 18,
+            "value": "number"
+        },
+        "ASL": {
+            "caption": "fps",
+            "default_val": 30,
+            "doc": "Specifies the video frame rate per second.",
+            "editor": "DynamicValue",
+            "name": "fps",
+            "optional": false,
+            "rank": 15,
+            "value": "number"
+        },
+        "ASM": {
+            "caption": "RTMP URL",
+            "doc": "The RTMP URL for the stream",
+            "editor": "DynamicValue",
+            "name": "endpoints",
+            "rank": 1,
+            "value": "text"
+        },
+        "ASN": {
+            "caption": "maxDuration",
+            "default_val": 86400,
+            "doc": "maximum duration in seconds after which recording/streaming is forcefully stopped. Defaults: 10800 seconds (3 hours) for recordings",
+            "editor": "DynamicValue",
+            "name": "maxDuration",
+            "optional": false,
+            "rank": 19,
+            "value": "number"
+        }
+    },
+    "type": "client_side"
+}

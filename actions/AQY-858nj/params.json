@@ -1,0 +1,36 @@
+{
+    "category": "plugins",
+    "display": "Daily - get presence",
+    "fields": {
+        "AQZ": {
+            "caption": "room name",
+            "doc": "The room to retrieve participant count information",
+            "editor": "DynamicValue",
+            "name": "name",
+            "rank": 1,
+            "value": "text"
+        },
+        "AQc": {
+            "caption": "This action provides participant presence data. It should be called no more frequently than once every 15 seconds.",
+            "editor": "Label",
+            "name": "information",
+            "rank": 0
+        }
+    },
+    "return_value": {
+        "AQa": {
+            "caption": "participant count",
+            "name": "participantCount",
+            "rank": 0,
+            "value": "number"
+        },
+        "AQh": {
+            "caption": "user ids",
+            "is_list": true,
+            "name": "userIds",
+            "rank": 1,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}

@@ -1,9 +1,9 @@
 {
     "category": "plugins",
-    "display": "Daily - leave room",
+    "display": "Daily - stop livestream",
     "fields": {
-        "AMU": {
-            "caption": "Use this action to leave an existing video or audio call.",
+        "AMW": {
+            "caption": "Use this action to stop a livestream",
             "editor": "Label",
             "name": "information",
             "rank": 0

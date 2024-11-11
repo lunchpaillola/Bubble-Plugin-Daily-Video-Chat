@@ -1,0 +1,185 @@
+{
+    "add_is_visible": true,
+    "can_fit_height": false,
+    "can_fit_width": false,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 100,
+        "width": 600
+    },
+    "display": "Daily Custom Video Call (Legacy)",
+    "events": {
+        "AOd": {
+            "caption": "left-meeting",
+            "doc": "Emitted once the local participant has joined the call. At this point, the call is considered connected.",
+            "name": "left-meeting"
+        },
+        "AOi": {
+            "caption": "joined-meeting",
+            "doc": "Emitted once the local participant has left the call. From the local user's perspective, this means the call has disconnected.",
+            "name": "joined-meeting"
+        }
+    },
+    "fields": {
+        "ANu": {
+            "caption": "This video call element includes the ability to customize theme colors for various parts of the video call UI. You can choose to leave these colors as is or customize the values below. ",
+            "editor": "Label",
+            "name": "color_theme",
+            "rank": 9
+        },
+        "ANv": {
+            "caption": "accent",
+            "default_val": "rgba(27, 235, 185, 1)",
+            "doc": "Main theme color. Used for primary actions and keyboard focus.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "accent",
+            "rank": 10
+        },
+        "ANw": {
+            "caption": "accent text",
+            "default_val": "rgba(18, 26, 36, 1)",
+            "doc": "Text color rendered on accent.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "accent_text",
+            "rank": 11
+        },
+        "ANx": {
+            "caption": "background",
+            "default_val": "rgba(18, 26, 36, 1)",
+            "doc": "Background color.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "background",
+            "rank": 12
+        },
+        "ANy": {
+            "caption": "backgroundAccent",
+            "default_val": "rgba(31, 45, 61, 1)",
+            "doc": "Background color for highlighted elements.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "backgroundaccent",
+            "rank": 13
+        },
+        "ANz": {
+            "caption": "baseText",
+            "default_val": "rgba(255, 255, 255, 1)",
+            "doc": "Default text and icon color, as rendered on background or backgroundAccent.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "basetext",
+            "rank": 14
+        },
+        "AOA": {
+            "caption": "border",
+            "default_val": "rgba(43, 63, 86, 1)",
+            "doc": "Default border color for bordered elements.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "border",
+            "rank": 15
+        },
+        "AOB": {
+            "caption": "mainAreaBG",
+            "default_val": "rgba(18, 26, 36, 1)",
+            "doc": "Background color for the main call area.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "mainAreaBg",
+            "rank": 16
+        },
+        "AOC": {
+            "caption": "mainAreaBgAccent",
+            "default_val": "rgba(43, 63, 86, 1)",
+            "doc": "Background color for video tiles.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "mainareabgaccent",
+            "rank": 17
+        },
+        "AOD": {
+            "caption": "mainAreaText",
+            "default_val": "rgba(255, 255, 255, 1)",
+            "doc": "\tText color for text rendered inside the call main area, e.g. names.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "mainareatext",
+            "rank": 18
+        },
+        "AOE": {
+            "caption": "supportiveText",
+            "default_val": "rgba(200, 209, 220, 1)",
+            "doc": "Text color for supportive, less emphasized, text.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "supportivetext",
+            "rank": 19
+        },
+        "AOF": {
+            "caption": "--------------------------Color Theme---------------------------",
+            "editor": "Label",
+            "name": "colorinformation",
+            "rank": 7
+        },
+        "AOG": {
+            "caption": "To learn more about color theming, visit https://docs.daily.co/guides/customizing-daily-prebuilt-calls-with-color-themes",
+            "editor": "Label",
+            "name": "colorlink",
+            "rank": 8
+        },
+        "AOz": {
+            "caption": "active speaker mode",
+            "default_val": true,
+            "doc": "Specifies whether to start the Daily Prebuilt call in active speaker mode. Defaults to yes, but can be set to no to start the call in grid mode instead.",
+            "editor": "DynamicValue",
+            "name": "active_speaker_mode",
+            "rank": 6,
+            "value": "boolean"
+        },
+        "ARB": {
+            "caption": ":  🚨 Important Notice: This element is not compatible with the current responsive engine and will be removed by December 2024. Please transition to the custom method outlined below to ensure continued functionality. The updated method replaces this element by utilizing the Daily - join room action.",
+            "editor": "Label",
+            "name": "info_1",
+            "rank": 0
+        },
+        "ARC": {
+            "caption": "To create custom-sized video calls using Bubble's updated responsive engine, follow these steps:",
+            "editor": "Label",
+            "name": "info_2",
+            "rank": 1
+        },
+        "ARD": {
+            "caption": " 1. In Bubble's settings, make sure to check \"expose the option to add an ID attribute to HTML elements\" under the General appearance section in the General tab.",
+            "editor": "Label",
+            "name": "info_3",
+            "rank": 2
+        },
+        "ARE": {
+            "caption": "2.  Create a group within Bubble where your video call will overlay, and add a name to the ID attribute section of the group. ",
+            "editor": "Label",
+            "name": "info_4",
+            "rank": 3
+        },
+        "ARF": {
+            "caption": "3. In your workflow, use the \"Daily - Join Room\" action. ",
+            "editor": "Label",
+            "name": "info_5",
+            "rank": 4
+        },
+        "ARG": {
+            "caption": "4. Select \"custom\" for the \"room style,\" and in the \"Custom position options\" field, enter the same ID attribute used for the group in the \"element ID\" section. Your video call will overlay over the group you created.",
+            "editor": "Label",
+            "name": "info_6",
+            "rank": 5
+        }
+    },
+    "has_reset_fn": false,
+    "icon": "ion-ios-videocam-outline",
+    "property_applications": {
+        "Background": true,
+        "MinWidth": true,
+        "resizable": true
+    }
+}

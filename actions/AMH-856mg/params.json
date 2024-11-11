@@ -1,0 +1,39 @@
+{
+    "category": "plugins",
+    "display": "Daily - start and join live stream",
+    "fields": {
+        "AME": {
+            "caption": "room url",
+            "doc": "Enter the full Daily room url for the room a user would like to stream. This should be in the format https://your-daily-domain.daily.co/room-name",
+            "editor": "DynamicValue",
+            "name": "roomurl",
+            "rank": 1,
+            "value": "text"
+        },
+        "AMF": {
+            "caption": "rtmp url",
+            "default_val": "",
+            "doc": "Retrieve this from your streaming provider (ie youtube, twitch etc) This should be in the format rtmp://RTMP_ENDPOINT/STREAM_KEY  or rtmps://RTMP_ENDPOINT/STREAM_KEY",
+            "editor": "DynamicValue",
+            "name": "rtmplink",
+            "rank": 2,
+            "value": "text"
+        },
+        "AMG": {
+            "caption": "meeting token",
+            "default_val": "",
+            "doc": "Enter a meeting owner token to livestream. You can use the Daily - create a meeting token action to create a meeting owner token.",
+            "editor": "DynamicValue",
+            "name": "token",
+            "rank": 3,
+            "value": "text"
+        },
+        "AQV": {
+            "caption": "Use this action to join and start a live stream in full screen it is a pay as you go feature that requires a credit card",
+            "editor": "Label",
+            "name": "information",
+            "rank": 0
+        }
+    },
+    "type": "client_side"
+}

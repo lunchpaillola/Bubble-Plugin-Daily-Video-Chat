@@ -1,31 +1,216 @@
 {
     "category": "plugins",
-    "display": "Daily - Join room ",
+    "display": "Daily - join room ",
     "fields": {
         "AHq": {
-            "caption": "room url",
+            "caption": "url",
+            "doc": "Enter the full Daily URL for the room the user should join. If you don't have a URL yet, you can add one with the Daily - Create room action. The URL should be in the format https://your-daily-domain.daily.co/room-name",
             "editor": "DynamicValue",
             "name": "roomurl",
-            "rank": 0,
+            "rank": 1,
             "value": "text"
         },
         "AHr": {
-            "caption": "Style",
+            "caption": "room style",
             "default_val": "bottom",
-            "doc": "",
+            "doc": "Choose the room style. Fullscreen will create a  video call that will occupy the entire screen. The bottom right will occupy the bottom right portion of the screen. The top right will occupy the top right portion of the screen. The custom position will occupy the space of a group you define (you will need to enter the id attribute of the group you'd like the call to display in). Audio-only will start an audio-only call (no video or interface will be created).",
             "editor": "Dropdown",
             "name": "size",
-            "options": "center,bottom right,top right",
-            "rank": 1
+            "options": "fullscreen,bottom right,top right,custom position,audio only,",
+            "rank": 2
         },
         "AHs": {
             "caption": "meeting token",
             "default_val": "",
+            "doc": "Optionally enter a meeting token to configure the video session on a per-user basis. To create a meeting token, use the daily - create meeting token action.",
             "editor": "DynamicValue",
             "name": "token",
             "optional": true,
-            "rank": 2,
+            "rank": 3,
             "value": "text"
+        },
+        "AMV": {
+            "caption": "Use this action to join a Daily video or audio room and overlay Daily prebuilt in your app. ",
+            "editor": "Label",
+            "name": "information",
+            "rank": 0
+        },
+        "APU": {
+            "caption": "element ID",
+            "doc": "For a  video call in a custom position. If you'd like to render the call in a particular group, add the id attribute of the group here and choose \"custom position\" as the room style.",
+            "editor": "DynamicValue",
+            "name": "element_id",
+            "optional": true,
+            "rank": 13,
+            "value": "text"
+        },
+        "APV": {
+            "caption": "active speaker mode",
+            "default_val": true,
+            "doc": "Specifies whether to start the Daily Prebuilt call in active speaker mode. Defaults to yes, but can be set to no to start the call in grid mode instead.",
+            "editor": "DynamicValue",
+            "name": "active_speaker_mode",
+            "rank": 6,
+            "value": "boolean"
+        },
+        "APW": {
+            "caption": "--------------------------Color Theme---------------------------",
+            "editor": "Label",
+            "name": "colorinformation",
+            "rank": 14
+        },
+        "APX": {
+            "caption": "Customize theme colors for various parts of the video call UI. You can leave these colors as is or customize the values below. ",
+            "editor": "Label",
+            "name": "color_theme",
+            "rank": 15
+        },
+        "APY": {
+            "caption": "To learn more about color theming, visit https://docs.daily.co/guides/customizing-daily-prebuilt-calls-with-color-themes",
+            "editor": "Label",
+            "name": "colorlink",
+            "rank": 16
+        },
+        "APZ": {
+            "caption": "accent",
+            "default_val": "rgba(27, 235, 185, 1)",
+            "doc": "Main theme color. Used for primary actions and keyboard focus.",
+            "editor": "Color",
+            "name": "accent",
+            "optional": false,
+            "rank": 17
+        },
+        "APa": {
+            "caption": "accent text",
+            "default_val": "rgba(18, 26, 36, 1)",
+            "doc": "Text color rendered on accent.",
+            "editor": "Color",
+            "name": "accent_text",
+            "rank": 18
+        },
+        "APb": {
+            "caption": "background",
+            "default_val": "rgba(18, 26, 36, 1)",
+            "doc": "Background color.",
+            "editor": "Color",
+            "name": "background",
+            "rank": 19
+        },
+        "APc": {
+            "caption": "background accent",
+            "default_val": "rgba(31, 45, 61, 1)",
+            "doc": "Background color for highlighted elements.",
+            "editor": "Color",
+            "name": "backgroundaccent",
+            "rank": 20
+        },
+        "APd": {
+            "caption": "base text",
+            "default_val": "rgba(255, 255, 255, 1)",
+            "doc": "Default text and icon color, as rendered on background or backgroundAccent.",
+            "editor": "Color",
+            "name": "basetext",
+            "rank": 21
+        },
+        "APe": {
+            "caption": "border",
+            "default_val": "rgba(43, 63, 86, 1)",
+            "doc": "Default border color for bordered elements.",
+            "editor": "Color",
+            "name": "border",
+            "rank": 22
+        },
+        "APg": {
+            "caption": "main area background accent",
+            "default_val": "rgba(18, 26, 36, 1)",
+            "doc": "Background color for the main call area.",
+            "editor": "Color",
+            "name": "mainAreaBg",
+            "rank": 23
+        },
+        "APh": {
+            "caption": "main area bg accent",
+            "default_val": "rgba(43, 63, 86, 1)",
+            "doc": "Background color for video tiles.",
+            "editor": "Color",
+            "name": "mainareabgaccent",
+            "rank": 24
+        },
+        "APi": {
+            "caption": "main area text",
+            "default_val": "rgba(255, 255, 255, 1)",
+            "doc": "Text color for text rendered inside the call main area, e.g. names.",
+            "editor": "Color",
+            "name": "mainareatext",
+            "rank": 25
+        },
+        "APj": {
+            "caption": "supportive text",
+            "default_val": "rgba(200, 209, 220, 1)",
+            "doc": "Text color for supportive, less emphasized, text.",
+            "editor": "Color",
+            "name": "supportivetext",
+            "rank": 26
+        },
+        "APk": {
+            "caption": "Enter the \"id attribute\" of a group and select \"custom position\" for the room style to render the call into a specific group.",
+            "editor": "Label",
+            "name": "customcallinfo",
+            "rank": 12
+        },
+        "APl": {
+            "caption": "--------------------Custom Position Options--------------------",
+            "editor": "Label",
+            "name": "custom_call_title",
+            "rank": 11
+        },
+        "APm": {
+            "caption": "----------------------Interface  Controls------------------------",
+            "editor": "Label",
+            "name": "interface_controls",
+            "rank": 4
+        },
+        "APq": {
+            "caption": "leave button",
+            "default_val": true,
+            "doc": "Determines whether the leave button is visible",
+            "editor": "DynamicValue",
+            "name": "showleavebutton",
+            "rank": 7,
+            "value": "boolean"
+        },
+        "APr": {
+            "caption": "full screen button",
+            "default_val": true,
+            "doc": "Determines whether the full screen button is visible",
+            "editor": "DynamicValue",
+            "name": "showfullscreenbutton",
+            "rank": 8,
+            "value": "boolean"
+        },
+        "APs": {
+            "caption": "Customize the in-call UI by hiding and showing the leave or full-screen buttons or starting the call in active speaker or grid mode.",
+            "editor": "Label",
+            "name": "interfaceinfo",
+            "rank": 5
+        },
+        "AQR": {
+            "caption": "minimum tiles",
+            "default_val": 1,
+            "doc": "Specifies the minimum video tiles when the browser is resized when the call is in grid mode. The default and minimum required is 1",
+            "editor": "DynamicValue",
+            "name": "minimumTiles",
+            "rank": 9,
+            "value": "number"
+        },
+        "AQS": {
+            "caption": "maximum tiles",
+            "default_val": 25,
+            "doc": "Specifies the maximum video tiles when the browser is resized when the call is grid mode. The default is 25 and the maximum allowed is 49.",
+            "editor": "DynamicValue",
+            "name": "maximumTiles",
+            "rank": 10,
+            "value": "number"
         }
     },
     "type": "client_side"

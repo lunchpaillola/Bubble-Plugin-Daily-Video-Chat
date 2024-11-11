@@ -1,0 +1,23 @@
+{
+    "caption": "start live stream",
+    "doc": "Start a live stream, this action is available to Daily users on paid plans. Learn more at Daily.co/pricing",
+    "fields": {
+        "APN": {
+            "caption": "rtmp url",
+            "doc": "Retrieve this from your streaming provider (ie youtube, twitch etc) This should be in the format rtmp://RTMP_ENDPOINT/STREAM_KEY  or rtmps://RTMP_ENDPOINT/STREAM_KEY",
+            "editor": "DynamicValue",
+            "name": "rtmplink",
+            "rank": 0,
+            "value": "text"
+        },
+        "APT": {
+            "caption": "layout",
+            "default_val": "active-participant",
+            "doc": "The default layout is the default grid layout, which renders participants in a grid, or in a single column vertical grid to the right, if a screen share is enabled.   Active participant layout focuses on the current speaker, and places up to 9 other cameras to the right in a single column vertical grid in the order in which they last spoke.",
+            "editor": "Dropdown",
+            "name": "layout",
+            "options": "default,active-participant",
+            "rank": 1
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "category": "plugins",
+    "display": "Daily - get recording link",
+    "fields": {
+        "AOY": {
+            "caption": "recording id",
+            "doc": "Enter the recording ID from which you would like a download link. If you need to get the recording id use the Daily - get recordings action first.",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AOZ": {
+            "caption": "download link",
+            "name": "download_link",
+            "rank": 0,
+            "value": "text"
+        },
+        "AOa": {
+            "caption": "expires",
+            "name": "expires",
+            "rank": 1,
+            "value": "number"
+        }
+    },
+    "type": "server_side"
+}

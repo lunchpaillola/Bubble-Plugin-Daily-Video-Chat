@@ -1,0 +1,305 @@
+{
+    "category": "plugins",
+    "display": "Daily - create room",
+    "fields": {
+        "AMX": {
+            "caption": "enable screen share",
+            "default_val": true,
+            "doc": "Determines whether screen share is enabled. Options are yes and no.",
+            "editor": "DynamicValue",
+            "name": "screenshare",
+            "rank": 4,
+            "value": "boolean"
+        },
+        "AMY": {
+            "caption": "enable chat",
+            "default_val": true,
+            "doc": "Determines whether chat is enabled. Options are yes and no.",
+            "editor": "DynamicValue",
+            "name": "chat",
+            "rank": 5,
+            "value": "boolean"
+        },
+        "AMZ": {
+            "caption": "owner only broadcast",
+            "default_val": false,
+            "doc": "Options are yes and no. If set to yes, only meeting owners are allowed to turn on camera, unmute mic, and share screen. You can configure a meeting owner token with the Daily - create meeting token action",
+            "editor": "DynamicValue",
+            "name": "broadcast",
+            "rank": 17,
+            "value": "boolean"
+        },
+        "AMa": {
+            "caption": "enable recording",
+            "doc": "Determines whether a recording is enabled on the call. Options are cloud,local,rtp-tracks,output-byte-stream",
+            "editor": "Dropdown",
+            "name": "recording",
+            "optional": true,
+            "options": "cloud,local,rtp-tracks,output-byte-stream,cloud-beta",
+            "rank": 27,
+            "value": "text"
+        },
+        "AMb": {
+            "caption": "privacy",
+            "default_val": "public",
+            "doc": "Determines who can access the room.  Options are public and private",
+            "editor": "DynamicValue",
+            "name": "privacy",
+            "optional": false,
+            "options": "public,private",
+            "rank": 1,
+            "value": "text"
+        },
+        "AMc": {
+            "caption": "enable knocking",
+            "default_val": true,
+            "doc": "Turns on a lobby experience for private rooms. A participant without a corresponding meeting token can request to be admitted to the meeting with a \"knock\", and wait for the meeting owner to admit them. Options are yes and no.",
+            "editor": "DynamicValue",
+            "name": "knocking",
+            "rank": 2,
+            "value": "boolean"
+        },
+        "AMd": {
+            "caption": "exp (unix timestamp)",
+            "doc": "\"Expires\". This is a unix timestamp (seconds since the epoch.) Users cannot join a meeting in this room after this time. To convert a Bubble date format extract unix timestamps and divide by 1000",
+            "editor": "DynamicValue",
+            "name": "expires",
+            "optional": true,
+            "rank": 16,
+            "value": "number"
+        },
+        "AMe": {
+            "caption": "language",
+            "default_val": "en",
+            "doc": "The default language  for this room. Currently supported languages are de: German, en: English, fi: Finnish,  fr: French, nl: Dutch, pt: Portuguese, pl: Polish, sv: Swedish, es: Spanish, tr: Turkish, it: Italian, ka: Georgian, jp: Japanese, no: Norwegian, ru:Russian  user: Uses the browser's current language and defaults to English if not supported.",
+            "editor": "DynamicValue",
+            "name": "lang",
+            "options": "en,",
+            "rank": 3,
+            "value": "text"
+        },
+        "AMf": {
+            "caption": "Use this action to create a new room through Daily's API",
+            "editor": "Label",
+            "name": "room_info_ln_2",
+            "rank": 0
+        },
+        "ANV": {
+            "caption": "meeting join hook",
+            "doc": "Optional parameter to set a URL that will receive a webhook when a user joins a room.",
+            "editor": "DynamicValue",
+            "name": "meeting_join_hook",
+            "optional": true,
+            "rank": 20,
+            "value": "text"
+        },
+        "ANa": {
+            "caption": "-----------------Credit card required to unlock----------------",
+            "editor": "Label",
+            "name": "scale_plan",
+            "rank": 24
+        },
+        "ANb": {
+            "caption": "To unlock the below parameters, you'll need to add a credit card to your account. Visit https://dashboard.daily.co/billing to learn more about pricing and add your credit card details.",
+            "editor": "Label",
+            "name": "scale_info",
+            "rank": 25
+        },
+        "ANf": {
+            "caption": "nbf (unix timestamp)",
+            "doc": "This is a unix timestamp (seconds since the epoch.) Users cannot join a meeting in this room before this time. To convert a Bubble date format extract unix timestamps and divide by 1000",
+            "editor": "DynamicValue",
+            "name": "notbefore",
+            "optional": true,
+            "rank": 15,
+            "value": "number"
+        },
+        "ANi": {
+            "caption": "-----------------------Advanced Settings-----------------------",
+            "editor": "Label",
+            "name": "advanced_settings",
+            "rank": 13
+        },
+        "ANj": {
+            "caption": "Below are optional advanced room settings to further configure the call experience.",
+            "editor": "Label",
+            "name": "advanced_info",
+            "rank": 14
+        },
+        "AOp": {
+            "caption": "max participants",
+            "doc": "How many people are allowed in a room at the same time. Default is 200. Contact help@daily.co if you need a limit above 200.",
+            "editor": "DynamicValue",
+            "name": "max_participants",
+            "optional": true,
+            "rank": 26,
+            "value": "number"
+        },
+        "AOq": {
+            "caption": "eject at room exp",
+            "doc": "If there's a meeting going on at room exp time, end the meeting by kicking everyone out. This behavior can be overridden by setting eject properties of a meeting token.",
+            "editor": "DynamicValue",
+            "name": "eject_at_room_exp",
+            "optional": true,
+            "rank": 18,
+            "value": "boolean"
+        },
+        "APn": {
+            "caption": "enable people ui",
+            "default_val": true,
+            "doc": "Determines whether to display the People UI. When set to yes, a People button in the call tray reveals a People tab in the call sidebar. The tab lists all participants, and next to each name indicates audio status and an option to pin the participant. When enable people ui is set to no, the button and tab are hidden.",
+            "editor": "DynamicValue",
+            "name": "enable_people_ui",
+            "rank": 6,
+            "value": "boolean"
+        },
+        "APo": {
+            "caption": "video processing ui",
+            "default_val": false,
+            "doc": "Determines whether to display background blur controls. When set to yes, a participant can enable blur during a call.",
+            "editor": "DynamicValue",
+            "name": "enable_video_processing_ui",
+            "rank": 8,
+            "value": "boolean"
+        },
+        "APp": {
+            "caption": "enable prejoin ui",
+            "default_val": true,
+            "doc": "Determines whether participants enter a waiting room with a camera, mic, and browser check before joining a call.",
+            "editor": "DynamicValue",
+            "name": "enable_prejoin_ui",
+            "rank": 7,
+            "value": "boolean"
+        },
+        "AQi": {
+            "caption": "enable pip ui",
+            "default_val": false,
+            "doc": "Sets whether the room can use Daily Prebuilt's Picture in Picture controls. When set to true, an additional button will be available in Daily Prebuilt's UI to toggle the Picture in Picture feature.",
+            "editor": "DynamicValue",
+            "name": "enable_pip_ui",
+            "rank": 9,
+            "value": "boolean"
+        },
+        "AQj": {
+            "caption": "emoji reactions",
+            "default_val": false,
+            "doc": "Determines if Daily Prebuilt displays the Emoji Reactions UI. When set to true, a Reactions button appears in the call tray. This button allows users to select and send a reaction into the call. When set to false, the Reactions button is hidden and the feature is disabled.",
+            "editor": "DynamicValue",
+            "name": "enable_emoji_reactions",
+            "rank": 10,
+            "value": "boolean"
+        },
+        "AQk": {
+            "caption": "hand raising",
+            "default_val": false,
+            "doc": "Sets whether the participants in the room can use Daily Prebuilt's hand raising controls. When set to true, an additional button will be available in Daily Prebuilt's UI to toggle a hand raise.",
+            "editor": "DynamicValue",
+            "name": "enable_hand_raising",
+            "rank": 11,
+            "value": "boolean"
+        },
+        "AQl": {
+            "caption": "advanced chat",
+            "default_val": false,
+            "doc": "Property that gives end users a richer chat experience. This includes:  Emoji reactions to chat messages, emoji picker in the chat input form and ability to send a Giphy chat message",
+            "editor": "DynamicValue",
+            "name": "enable_advanced_chat",
+            "rank": 21,
+            "value": "boolean"
+        },
+        "AQm": {
+            "caption": "noise cancellation",
+            "default_val": false,
+            "doc": "Determines whether Daily Prebuilt displays noise cancellation controls. When set to true, a participant can enable microphone noise cancellation during a Daily Prebuilt call",
+            "editor": "DynamicValue",
+            "name": "enable_noise_cancellation_ui",
+            "rank": 12,
+            "value": "boolean"
+        },
+        "AQn": {
+            "caption": "eject after elapsed",
+            "doc": "Eject a meeting participant this many seconds after the participant joins the meeting. You can use this is a default length limit to prevent long meetings. This can be overridden by setting eject properties of a meeting token.",
+            "editor": "DynamicValue",
+            "name": "eject_after_elapsed",
+            "optional": true,
+            "rank": 19,
+            "value": "number"
+        },
+        "ARK": {
+            "caption": "breakout rooms",
+            "default_val": false,
+            "doc": "Sets whether Daily Prebuilt’s breakout rooms feature is enabled. When set to true, an owner in a Prebuilt call can create breakout rooms to divide participants into smaller, private groups.",
+            "editor": "DynamicValue",
+            "name": "enable_breakout_rooms",
+            "rank": 22,
+            "value": "boolean"
+        },
+        "ARL": {
+            "caption": "shared chat history",
+            "default_val": false,
+            "doc": "When enabled, newly joined participants in Prebuilt calls will request chat history from remote peers, in order to view chat messages from before they joined.",
+            "editor": "DynamicValue",
+            "name": "enable_shared_chat_history",
+            "rank": 23,
+            "value": "boolean"
+        }
+    },
+    "return_value": {
+        "AJE": {
+            "caption": "privacy",
+            "name": "privacy",
+            "rank": 0,
+            "value": "text"
+        },
+        "AJG": {
+            "caption": "url",
+            "name": "url",
+            "rank": 1,
+            "value": "text"
+        },
+        "AJH": {
+            "caption": "created_at",
+            "name": "created_at",
+            "rank": 2,
+            "value": "date"
+        },
+        "AJI": {
+            "caption": "exp (unix timestamp)",
+            "name": "exp",
+            "rank": 3,
+            "value": "number"
+        },
+        "AJJ": {
+            "caption": "enable_chat",
+            "name": "enable_chat",
+            "rank": 5,
+            "value": "boolean"
+        },
+        "AJK": {
+            "caption": "id",
+            "name": "id",
+            "rank": 6,
+            "value": "text"
+        },
+        "AKb": {
+            "caption": "name",
+            "name": "name",
+            "rank": 7,
+            "value": "text"
+        },
+        "ANR": {
+            "caption": "owner_only_broadcast",
+            "name": "broadcast",
+            "rank": 8,
+            "value": "boolean"
+        },
+        "ANh": {
+            "caption": "nbf (unix timestamp)",
+            "name": "not_before",
+            "rank": 4,
+            "value": "number"
+        }
+    },
+    "type": "server_side",
+    "use_packages": false
+}

@@ -1,16 +1,20 @@
 function(properties, context) {
 
 
+  //Load any data 
+
+
   //Do the operation
  if (window.callFrame === undefined){
      return;
  };
      
      if (window.callFrame !== undefined) {   
-     var a = callFrame.leave(); 
-     var b = callFrame.destroy();  
+      callFrame.setLocalAudio(!callFrame.localAudio()); 
     };
      
 
 
 }
+
+

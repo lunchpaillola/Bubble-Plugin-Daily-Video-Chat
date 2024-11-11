@@ -1,0 +1,12 @@
+{
+    "caption": "Daily - begin event listening",
+    "doc": "Use this action to start listening for events",
+    "fields": {
+        "AOj": {
+            "caption": "Use this action after the Daily - join room action to start listening for events (not necessary when using the Daily custom video call element)",
+            "editor": "Label",
+            "name": "info",
+            "rank": 0
+        }
+    }
+}

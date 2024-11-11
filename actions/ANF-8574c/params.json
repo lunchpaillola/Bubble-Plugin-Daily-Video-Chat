@@ -1,0 +1,23 @@
+{
+    "category": "plugins",
+    "display": "Daily - delete room ",
+    "fields": {
+        "AND": {
+            "caption": "room name",
+            "doc": "the name of the room to delete",
+            "editor": "DynamicValue",
+            "name": "name",
+            "optional": false,
+            "rank": 1,
+            "value": "text"
+        },
+        "ANE": {
+            "caption": "Use this action to delete a room through Daily's API. ",
+            "editor": "Label",
+            "name": "information",
+            "rank": 0
+        }
+    },
+    "type": "server_side",
+    "use_packages": false
+}

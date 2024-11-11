@@ -1,9 +1,9 @@
 {
     "category": "plugins",
-    "display": "Daily - leave room",
+    "display": "Daily - toggle mic",
     "fields": {
-        "AMU": {
-            "caption": "Use this action to leave an existing video or audio call.",
+        "ANd": {
+            "caption": "Use this action alongside the audio-only call option.",
             "editor": "Label",
             "name": "information",
             "rank": 0
